@@ -1,95 +1,86 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AXES digital | الصفحة الرئيسية</title>
-
-  <!-- CSS الأساسي -->
-  <link href="css/style.css" rel="stylesheet">
-  <!-- أيقونات وخطوط -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AXES digital | حلول رقمية وهندسية متكاملة</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </head>
-<body class="light">
+<body>
 
-  <!-- ✅ شريط التنقل -->
+  <!-- ✅ Header -->
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">AXES digital</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">الرئيسية</a></li>
-          <li><a href="about.html">من نحن</a></li>
-          <li><a href="services.html">الخدمات</a></li>
-          <li><a href="contact.html">تواصل معنا</a></li>
-        </ul>
-      </nav>
-      <button id="theme-toggle">🌙</button>
+      <div class="logo">AXES digital</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><button id="theme-toggle">🌓</button></li>
+      </ul>
     </div>
   </header>
 
-  <!-- ✅ واجهة ترحيبية -->
-  <section class="hero">
+  <!-- ✅ Hero Section -->
+  <section class="hero wow fadeIn">
     <div class="container">
-      <h2 class="wow fadeInUp">نحو هوية رقمية مميزة لشركتك</h2>
-      <p class="wow fadeInUp" data-wow-delay="0.2s">نحن خبراء في تصميم الهويات البصرية والمواقع الإلكترونية والبنية التكنولوجية للمصانع والشركات.</p>
-      <a href="services.html" class="btn wow fadeInUp" data-wow-delay="0.4s">اكتشف خدماتنا</a>
+      <h1>نقود تحولك الرقمي</h1>
+      <p>حلول متكاملة في التصميم، المواقع، الشبكات، التحكم الصناعي وأكثر!</p>
+      <a href="contact.html" class="btn-hero">احصل على عرضك الآن</a>
     </div>
   </section>
 
-  <!-- ✅ قسم نبذة عن الشركة -->
-  <section class="about-home">
+  <!-- ✅ Highlights -->
+  <section class="highlights wow fadeInUp" data-wow-delay="0.2s">
     <div class="container">
-      <h3>من نحن</h3>
-      <p>
-        AXES digital شركة متخصصة في تقديم حلول متكاملة في مجالات التصميم، المواقع الإلكترونية، الشبكات والأنظمة الصناعية، لتساعد الشركات على تطوير وتحسين بنيتها التقنية والبصرية.
-      </p>
-    </div>
-  </section>
-
-  <!-- ✅ قسم الخدمات -->
-  <section class="services-preview">
-    <div class="container">
-      <h3>بعض من خدماتنا</h3>
-      <div class="service-cards">
-
-        <div class="card wow fadeInUp">
-          <h4>تصميم الهوية البصرية</h4>
-          <p>هويات احترافية تشمل الكروت، الكتالوجات، الشعارات، والطباعة.</p>
-        </div>
-
-        <div class="card wow fadeInUp" data-wow-delay="0.2s">
-          <h4>إنشاء المواقع الإلكترونية</h4>
-          <p>مواقع حديثة وسريعة وآمنة لعرض خدماتك وتوسيع انتشارك.</p>
-        </div>
-
-        <div class="card wow fadeInUp" data-wow-delay="0.4s">
-          <h4>تركيب الشبكات والسيرفرات</h4>
-          <p>حلول متكاملة لتأسيس شبكات الشركات وتأمين البيانات.</p>
-        </div>
-
-        <div class="card wow fadeInUp" data-wow-delay="0.6s">
-          <h4>لوحات تحكم المصانع</h4>
-          <p>تصميم وصيانة لوحات التحكم وخطوط الإنتاج.</p>
-        </div>
-
+      <div class="highlight">
+        <h4>تصميم هوية الشركات</h4>
+        <p>كروت، مطبوعات، يافطات، واجهات عصرية.</p>
+      </div>
+      <div class="highlight">
+        <h4>مواقع إلكترونية احترافية</h4>
+        <p>متجاوبة، سريعة، آمنة، وواجهة جذابة.</p>
+      </div>
+      <div class="highlight">
+        <h4>شبكات وسيرفرات</h4>
+        <p>تأسيس، تأمين، مراقبة، ونسخ احتياطي.</p>
+      </div>
+      <div class="highlight">
+        <h4>لوحات كنترول صناعي</h4>
+        <p>باور وتحكم لماكينات الإنتاج وخطوط التصنيع.</p>
       </div>
     </div>
   </section>
 
-  <!-- ✅ تذييل -->
+  <!-- ✅ Call to Action -->
+  <section class="cta wow fadeInUp" data-wow-delay="0.4s">
+    <div class="container">
+      <h2>ابدأ رحلة تطوير شركتك معنا</h2>
+      <p>اتصل بنا الآن لنمنحك استشارة مجانية في بناء هويتك أو تطوير بنيتك الرقمية.</p>
+      <a href="contact.html" class="btn-cta">تواصل معنا</a>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 AXES digital. جميع الحقوق محفوظة.</p>
-      <p>📞 01000286401</p>
+      جميع الحقوق محفوظة &copy; 2025 AXES digital | 01000286401
     </div>
   </footer>
 
-  <!-- ✅ ملفات السكربت -->
-  <script src="js/main.js"></script>
-  <script src="https://unpkg.com/wowjs/dist/wow.min.js"></script>
+  <!-- ✅ Theme Toggle -->
   <script>
-    new WOW().init();
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
   </script>
+
 </body>
 </html>
