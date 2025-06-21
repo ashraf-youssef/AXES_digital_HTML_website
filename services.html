@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الخدمات | AXES digital</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <script>new WOW().init();</script>
 </head>
 <body>
 
@@ -27,50 +25,52 @@
     </div>
   </header>
 
-  <!-- ✅ خدماتنا -->
-  <section class="services-preview">
+  <!-- ✅ عنوان الصفحة -->
+  <section class="container wow fadeInUp">
+    <h2>خدماتنا</h2>
+    <p>نقدّم في AXES digital باقة متكاملة من الخدمات التقنية والإبداعية للشركات والمؤسسات.</p>
+  </section>
+
+  <!-- ✅ خدمات -->
+  <section class="container highlights wow fadeInUp" data-wow-delay="0.2s">
+    <div class="highlight">
+      <h4>تصميم هويات الشركات والمطبوعات</h4>
+      <p>كروت شخصية، كتالوجات، يافطات، واجهات كلادينج بتصميم إبداعي وهوية موحدة.</p>
+    </div>
+    <div class="highlight">
+      <h4>إنشاء المواقع الإلكترونية</h4>
+      <p>مواقع متجاوبة وسريعة تعكس احترافية شركتك، ومتوافقة مع الأجهزة.</p>
+    </div>
+    <div class="highlight">
+      <h4>الشبكات والسيرفرات وأنظمة الأمان</h4>
+      <p>تأسيس شبكات وسيرفرات داخلية، أجهزة بصمة، كاميرات مراقبة، ونسخ احتياطي للبيانات.</p>
+    </div>
+    <div class="highlight">
+      <h4>لوحات التحكم الصناعي</h4>
+      <p>تركيب وصيانة لوحات الباور والكنترول لخطوط الإنتاج والماكينات الصناعية المختلفة.</p>
+    </div>
+  </section>
+
+  <!-- ✅ CTA -->
+  <section class="cta wow fadeInUp" data-wow-delay="0.3s">
     <div class="container">
-      <h3 class="wow fadeInDown">خدماتنا</h3>
-
-      <div class="service-cards">
-
-        <div class="card wow fadeInUp" data-wow-delay="0.1s">
-          <h4>تصميم الهوية البصرية والمطبوعات</h4>
-          <p>نصمم هويات احترافية تعكس شخصية شركتك، من الشعار والكروت إلى الكتالوجات واليافطات.</p>
-        </div>
-
-        <div class="card wow fadeInUp" data-wow-delay="0.2s">
-          <h4>إنشاء المواقع الإلكترونية</h4>
-          <p>ننشئ لك موقعاً عصرياً سريعاً متجاوباً مع جميع الأجهزة ليكون الواجهة الرقمية لشركتك.</p>
-        </div>
-
-        <div class="card wow fadeInUp" data-wow-delay="0.3s">
-          <h4>تركيب الشبكات والسيرفرات</h4>
-          <p>حلول متكاملة لتأسيس شبكات المؤسسات، مع تأمين وحماية بيانات شركتك بأعلى المعايير.</p>
-        </div>
-
-        <div class="card wow fadeInUp" data-wow-delay="0.4s">
-          <h4>لوحات الكنترول الصناعية</h4>
-          <p>نصمم ونركب لوحات الكنترول والباور لخطوط الإنتاج والمصانع لضمان أعلى كفاءة تشغيل.</p>
-        </div>
-
-      </div>
+      <h2>هل لديك مشروع؟</h2>
+      <p>راسلنا لنساعدك في تحقيق رؤيتك الرقمية والتقنية بأعلى جودة.</p>
+      <a href="contact.html" class="btn-cta">تواصل معنا الآن</a>
     </div>
   </section>
 
   <!-- ✅ Footer -->
   <footer class="footer">
     <div class="container">
-      جميع الحقوق محفوظة &copy; 2025 AXES digital
+      جميع الحقوق محفوظة &copy; 2025 AXES digital | 01000286401
     </div>
   </footer>
 
-  <!-- ✅ Toggle Theme -->
+  <!-- ✅ Theme Toggle -->
   <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
+    document.getElementById('theme-toggle').onclick = () =>
       document.body.classList.toggle('dark');
-    });
   </script>
 
 </body>
