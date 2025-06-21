@@ -1,118 +1,192 @@
-/* إعداد عام */
-* {
+/* === الخط === */
+body {
+  font-family: 'Cairo', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
+  direction: rtl;
   background-color: #ffffff;
   color: #000000;
-  transition: background-color 0.3s, color 0.3s;
-  line-height: 1.8;
+  transition: all 0.3s ease-in-out;
 }
 
+/* === الوضع الداكن === */
 body.dark {
-  background-color: #000000;
+  background-color: #121212;
   color: #ffffff;
 }
 
-/* الشريط العلوي */
-.top-bar {
+/* === رأس الصفحة === */
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s;
+}
+
+body.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+.navbar .container {
   display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-  background: #f1f1f1;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.top-bar button {
-  padding: 6px 12px;
-  border: none;
-  cursor: pointer;
-  background: #d80000;
-  color: #fff;
-  border-radius: 5px;
+.logo {
+  color: #d80000;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
-body.dark .top-bar {
-  background-color: #111;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
 }
 
-body.dark .top-bar button {
-  background: #ffffff;
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+body.dark .nav-links li a {
+  color: #ffffff;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
   color: #d80000;
 }
 
-/* الهيدر */
-.main-header {
-  text-align: center;
-  padding: 2rem;
-  background: #d80000;
-  color: white;
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.main-header .logo {
-  width: 120px;
+/* === واجهة ترحيبية === */
+.hero {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #d80000 0%, #a6a6a6 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.main-header h1 span {
-  font-weight: bold;
-  color: #fff;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-/* القائمة */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  background: #000000;
-  padding: 1rem 0;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a:hover {
+.hero .btn {
+  background-color: #ffffff;
   color: #d80000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
-/* نبذة */
-.intro {
-  padding: 2rem;
-  text-align: center;
-  background: #f9f9f9;
+.hero .btn:hover {
+  background-color: #f3f3f3;
 }
 
-body.dark .intro {
-  background: #111;
+/* === الأقسام العامة === */
+section {
+  padding: 4rem 1rem;
 }
 
-/* معاينة الخدمات */
-.services-preview {
-  padding: 2rem;
-  text-align: center;
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-.cards {
+/* === من نحن === */
+.about-home h3,
+.services-preview h3 {
+  font-size: 2rem;
+  color: #d80000;
+  margin-bottom: 1rem;
+}
+
+.about-home p {
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+body.dark .about-home p {
+  color: #dddddd;
+}
+
+/* === بطاقات الخدمات === */
+.service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .card {
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 1.5rem;
   border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
 
-body.d
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  color: #d80000;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: #444;
+}
+
+body.dark .card {
+  background-color: #222;
+  color: #ffffff;
+}
+
+body.dark .card p {
+  color: #ccc;
+}
+
+/* === التذييل === */
+.footer {
+  background-color: #f4f4f4;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+body.dark .footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+/* === تأثيرات WOW.js === */
+.wow {
+  visibility: hidden;
+}
