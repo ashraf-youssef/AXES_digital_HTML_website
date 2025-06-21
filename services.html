@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الخدمات | AXES digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+</head>
+<body>
+
+  <!-- ✅ Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">AXES digital</div>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html" class="active">الخدمات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><button id="theme-toggle">🌓</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ✅ خدماتنا -->
+  <section class="services-preview">
+    <div class="container">
+      <h3 class="wow fadeInDown">خدماتنا</h3>
+
+      <div class="service-cards">
+
+        <div class="card wow fadeInUp" data-wow-delay="0.1s">
+          <h4>تصميم الهوية البصرية والمطبوعات</h4>
+          <p>نصمم هويات احترافية تعكس شخصية شركتك، من الشعار والكروت إلى الكتالوجات واليافطات.</p>
+        </div>
+
+        <div class="card wow fadeInUp" data-wow-delay="0.2s">
+          <h4>إنشاء المواقع الإلكترونية</h4>
+          <p>ننشئ لك موقعاً عصرياً سريعاً متجاوباً مع جميع الأجهزة ليكون الواجهة الرقمية لشركتك.</p>
+        </div>
+
+        <div class="card wow fadeInUp" data-wow-delay="0.3s">
+          <h4>تركيب الشبكات والسيرفرات</h4>
+          <p>حلول متكاملة لتأسيس شبكات المؤسسات، مع تأمين وحماية بيانات شركتك بأعلى المعايير.</p>
+        </div>
+
+        <div class="card wow fadeInUp" data-wow-delay="0.4s">
+          <h4>لوحات الكنترول الصناعية</h4>
+          <p>نصمم ونركب لوحات الكنترول والباور لخطوط الإنتاج والمصانع لضمان أعلى كفاءة تشغيل.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <div class="container">
+      جميع الحقوق محفوظة &copy; 2025 AXES digital
+    </div>
+  </footer>
+
+  <!-- ✅ Toggle Theme -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+
+</body>
+</html>
