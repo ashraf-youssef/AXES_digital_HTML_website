@@ -1,74 +1,95 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AXES digital</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AXES digital | الصفحة الرئيسية</title>
+
+  <!-- CSS الأساسي -->
+  <link href="css/style.css" rel="stylesheet">
+  <!-- أيقونات وخطوط -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="light">
 
-  <!-- زر الوضع الليلي واللغة -->
-  <div class="top-bar">
-    <button id="toggleMode">🌙</button>
-    <button id="toggleLang">EN</button>
-  </div>
-
-  <!-- الشعار -->
-  <header class="main-header">
-    <img src="assets/logo.png" alt="AXES digital Logo" class="logo" />
-    <h1>نحن نبني المستقبل الرقمي لـ <span>AXES digital</span></h1>
+  <!-- ✅ شريط التنقل -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">AXES digital</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="services.html">الخدمات</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle">🌙</button>
+    </div>
   </header>
 
-  <!-- الروابط -->
-  <nav class="navbar">
-    <a href="index.html">الرئيسية</a>
-    <a href="about.html">من نحن</a>
-    <a href="services.html">الخدمات</a>
-    <a href="contact.html">تواصل معنا</a>
-  </nav>
-
-  <!-- نبذة عن الشركة -->
-  <section class="intro">
-    <h2>نبذة عن الشركة</h2>
-    <p>
-      نحن في AXES digital نقدم حلولاً متكاملة للشركات والمؤسسات لبناء هويتهم البصرية، إنشاء مواقع إلكترونية احترافية، تركيب الشبكات، وصيانة الأنظمة الصناعية.
-    </p>
+  <!-- ✅ واجهة ترحيبية -->
+  <section class="hero">
+    <div class="container">
+      <h2 class="wow fadeInUp">نحو هوية رقمية مميزة لشركتك</h2>
+      <p class="wow fadeInUp" data-wow-delay="0.2s">نحن خبراء في تصميم الهويات البصرية والمواقع الإلكترونية والبنية التكنولوجية للمصانع والشركات.</p>
+      <a href="services.html" class="btn wow fadeInUp" data-wow-delay="0.4s">اكتشف خدماتنا</a>
+    </div>
   </section>
 
-  <!-- خدمات رئيسية بشكل كروت -->
+  <!-- ✅ قسم نبذة عن الشركة -->
+  <section class="about-home">
+    <div class="container">
+      <h3>من نحن</h3>
+      <p>
+        AXES digital شركة متخصصة في تقديم حلول متكاملة في مجالات التصميم، المواقع الإلكترونية، الشبكات والأنظمة الصناعية، لتساعد الشركات على تطوير وتحسين بنيتها التقنية والبصرية.
+      </p>
+    </div>
+  </section>
+
+  <!-- ✅ قسم الخدمات -->
   <section class="services-preview">
-    <h2>خدماتنا</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="assets/branding.jpg" alt="تصميم الهويات">
-        <h3>تصميم الهويات البصرية</h3>
-        <p>كروت، بروشورات، واجهات كلادينج ومواد دعائية.</p>
-      </div>
-      <div class="card">
-        <img src="assets/web.jpg" alt="مواقع إلكترونية">
-        <h3>إنشاء المواقع الإلكترونية</h3>
-        <p>مواقع احترافية سريعة وآمنة ومتجاوبة مع الأجهزة.</p>
-      </div>
-      <div class="card">
-        <img src="assets/network.jpg" alt="شبكات وسيرفرات">
-        <h3>الشبكات والسيرفرات</h3>
-        <p>تركيب كاميرات، بصمة، أنظمة أمان، تأمين البيانات.</p>
-      </div>
-      <div class="card">
-        <img src="assets/control.jpg" alt="كنترول صناعي">
-        <h3>لوحات كنترول صناعي</h3>
-        <p>تصميم وتركيب لوحات التحكم وخطوط الإنتاج.</p>
+    <div class="container">
+      <h3>بعض من خدماتنا</h3>
+      <div class="service-cards">
+
+        <div class="card wow fadeInUp">
+          <h4>تصميم الهوية البصرية</h4>
+          <p>هويات احترافية تشمل الكروت، الكتالوجات، الشعارات، والطباعة.</p>
+        </div>
+
+        <div class="card wow fadeInUp" data-wow-delay="0.2s">
+          <h4>إنشاء المواقع الإلكترونية</h4>
+          <p>مواقع حديثة وسريعة وآمنة لعرض خدماتك وتوسيع انتشارك.</p>
+        </div>
+
+        <div class="card wow fadeInUp" data-wow-delay="0.4s">
+          <h4>تركيب الشبكات والسيرفرات</h4>
+          <p>حلول متكاملة لتأسيس شبكات الشركات وتأمين البيانات.</p>
+        </div>
+
+        <div class="card wow fadeInUp" data-wow-delay="0.6s">
+          <h4>لوحات تحكم المصانع</h4>
+          <p>تصميم وصيانة لوحات التحكم وخطوط الإنتاج.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- بيانات التواصل -->
-  <footer>
-    <p>📞 01000286401 | 📧 ashrafyoussef.dev@gmail.com</p>
-    <p>&copy; 2025 AXES digital - جميع الحقوق محفوظة</p>
+  <!-- ✅ تذييل -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 AXES digital. جميع الحقوق محفوظة.</p>
+      <p>📞 01000286401</p>
+    </div>
   </footer>
 
+  <!-- ✅ ملفات السكربت -->
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/wowjs/dist/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 </html>
