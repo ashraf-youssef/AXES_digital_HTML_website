@@ -1,58 +1,98 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>من نحن | AXES digital</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>new WOW().init();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>من نحن - AXES digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fff;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #900c3f, #4a0027);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .section-title {
+      color: #900c3f;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .about-section {
+      animation: fadeInUp 0.7s ease-in-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    footer {
+      background-color: #900c3f;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">AXES digital</div>
-      <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html" class="active">من نحن</a></li>
-        <li><a href="services.html">الخدمات</a></li>
-        <li><a href="contact.html">تواصل معنا</a></li>
-        <li><button id="theme-toggle">🌓</button></li>
-      </ul>
-    </div>
+  <!-- رأس الصفحة -->
+  <header>
+    <h1>من نحن</h1>
+    <p>تعرف على AXES digital عن قرب</p>
   </header>
 
-  <!-- ✅ عن الشركة -->
-  <section class="about-section wow fadeInUp">
-    <div class="container">
-      <h2>من نحن</h2>
-      <p>
-        AXES digital هي شركة رائدة في تقديم الحلول الرقمية والهندسية، نعمل بشغف على تقديم خدمات متكاملة تشمل التصميم الجرافيكي، إنشاء المواقع الإلكترونية، تركيب الشبكات والسيرفرات، ولوحات التحكم الصناعية.
-      </p>
-      <p>
-        نحن نؤمن أن النجاح في العصر الرقمي يتطلب شريكًا يفهم التكنولوجيا، التصميم، وسلوك العملاء. لذلك نحن هنا لنمنحك تجربة شاملة تعكس احترافية شركتك وتزيد من إنتاجيتك وكفاءتك.
-      </p>
-      <p>
-        بخبرة واسعة وطاقم عمل احترافي، نُقدّم قيمة حقيقية لكل مشروع نقوم به، ونتعامل مع كل عميل كأنه شريك نجاح.
-      </p>
+  <!-- محتوى من نحن -->
+  <section class="container py-5 about-section">
+    <h2 class="section-title text-center">AXES digital - من نحن؟</h2>
+    <p class="lead text-center">
+      AXES digital هي شركة متخصصة في تقديم حلول التصميم والهوية البصرية، تطوير المواقع الإلكترونية، الشبكات، السيرفرات، وأنظمة التحكم الصناعي.
+    </p>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h4 class="text-danger">رؤيتنا</h4>
+        <p>
+          أن نكون الشريك الرقمي الموثوق به للشركات في التحول الرقمي الكامل من خلال تقديم حلول متطورة تخدم الأعمال بكفاءة واحترافية.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <h4 class="text-danger">رسالتنا</h4>
+        <p>
+          تمكين الشركات من الظهور الرقمي القوي، وإدارة أعمالهم بسلاسة، من خلال خدمات تصميم احترافية، ومواقع إلكترونية عالية الأداء، وبنية تحتية تقنية قوية وآمنة.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h4 class="text-danger">قيمنا</h4>
+        <ul>
+          <li>الجودة والاحترافية</li>
+          <li>الالتزام بالمواعيد</li>
+          <li>دعم العملاء المستمر</li>
+          <li>الإبداع والتجديد</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h4 class="text-danger">لماذا نحن؟</h4>
+        <p>
+          لأننا نمتلك خبرة حقيقية في السوق المصري والعربي، ونفهم تمامًا احتياجات المؤسسات بمختلف أنواعها، ونحول تلك الاحتياجات إلى حلول تقنية فعالة.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- ✅ Footer -->
-  <footer class="footer">
-    <div class="container">
-      جميع الحقوق محفوظة &copy; 2025 AXES digital | 01000286401
-    </div>
+  <!-- تذييل -->
+  <footer>
+    <p>&copy; 2025 AXES digital. جميع الحقوق محفوظة.</p>
+    <p>📞 01000286401</p>
   </footer>
-
-  <!-- ✅ Theme Toggle -->
-  <script>
-    document.getElementById('theme-toggle').onclick = () =>
-      document.body.classList.toggle('dark');
-  </script>
 
 </body>
 </html>
