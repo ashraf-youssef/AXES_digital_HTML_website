@@ -1,95 +1,205 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>تواصل معنا - AXES digital</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا - AXES Digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      background-color: #fff;
-      color: #111;
-    }
     header {
-      background: linear-gradient(135deg, #900c3f, #4a0027);
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
+      transition: all 0.3s ease;
     }
-    .section-title {
-      color: #900c3f;
-      font-weight: bold;
-      margin-bottom: 2rem;
+    header.shrink {
+      padding: 5px 20px;
+      background-color: rgba(0, 0, 0, 0.8);
     }
-    .contact-form {
-      background-color: #f8f9fa;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+    .top-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
-    .btn-danger {
-      background-color: #d80000;
+    .lang-switch, .theme-toggle {
+      background: none;
       border: none;
-    }
-    .btn-danger:hover {
-      background-color: #a30000;
-    }
-    footer {
-      background-color: #900c3f;
+      font-size: 18px;
       color: white;
-      padding: 2rem 1rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
       text-align: center;
-      margin-top: 3rem;
+      padding: 100px 20px;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .contact-form button {
+      background-color: #d10000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .map {
+      flex: 1;
+      min-height: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #d10000;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      z-index: 9999;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .social-icons i {
+      margin-left: 10px;
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- رأس الصفحة -->
-  <header>
-    <h1>تواصل معنا</h1>
-    <p>نسعد بخدمتك في أي وقت</p>
-  </header>
+<header id="navbar" style="background-color:#111; padding:20px;">
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="assets/logo.png" alt="Logo" style="height:40px;">
+      <h1 style="color:white;">AXES Digital</h1>
+    </div>
+    <div class="top-controls">
+      <button class="lang-switch" title="تغيير اللغة"><i class="fas fa-globe"></i></button>
+      <button class="theme-toggle" title="الوضع الليلي"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</header>
 
-  <!-- نموذج التواصل -->
-  <section class="container py-5">
-    <h2 class="section-title text-center">أرسل لنا رسالة</h2>
+<section class="hero">
+  <div class="hero-content">
+    <h2>تواصل معنا</h2>
+    <p>نسعد بخدمتك ومساعدتك في أي وقت</p>
+  </div>
+</section>
 
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <form class="contact-form" action="mailto:your_email@example.com" method="POST" enctype="text/plain">
-          <div class="mb-3">
-            <label for="name" class="form-label">الاسم الكامل</label>
-            <input type="text" class="form-control" name="name" required placeholder="اكتب اسمك هنا">
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">البريد الإلكتروني</label>
-            <input type="email" class="form-control" name="email" required placeholder="example@mail.com">
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">رسالتك</label>
-            <textarea class="form-control" name="message" rows="5" required placeholder="ما الذي تود التواصل بشأنه؟"></textarea>
-          </div>
-          <button type="submit" class="btn btn-danger w-100">إرسال الرسالة</button>
-        </form>
+<section class="contact-section">
+  <div class="contact-form">
+    <h3>راسلنا الآن</h3>
+    <form>
+      <input type="text" placeholder="الاسم" required />
+      <input type="email" placeholder="البريد الإلكتروني" required />
+      <textarea rows="6" placeholder="اكتب رسالتك هنا" required></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+  <div class="map">
+    <iframe src="https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/logo.png" alt="Logo" style="height:40px;">
+      <p>AXES Digital</p>
+      <p>شريكك نحو مستقبل رقمي مشرق وحلول تقنية مبتكرة</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>معلومات التواصل</h4>
+      <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+      <p><i class="fas fa-phone"></i> +20 123 456 789</p>
+      <p><i class="fas fa-envelope"></i> info@axesdigital.com</p>
+    </div>
+    <div>
+      <h4>تابعنا</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- بيانات التواصل -->
-  <section class="container text-center mt-5">
-    <h4 class="section-title">معلومات التواصل</h4>
-    <p>📞 الهاتف: 01000286401</p>
-    <p>📧 البريد: ashrafyoussef.dev@gmail.com</p>
-    <p>📍 مصر</p>
-  </section>
+<a href="https://wa.me/20123456789" class="whatsapp-float" title="تواصل واتساب"><i class="fab fa-whatsapp"></i></a>
 
-  <!-- تذييل -->
-  <footer>
-    <p>&copy; 2025 AXES digital. جميع الحقوق محفوظة.</p>
-  </footer>
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("navbar");
+    header.classList.toggle("shrink", window.scrollY > 50);
+  });
+</script>
 
 </body>
 </html>
