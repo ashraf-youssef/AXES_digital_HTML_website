@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن | AXES digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+</head>
+<body>
+
+  <!-- ✅ Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">AXES digital</div>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html" class="active">من نحن</a></li>
+        <li><a href="services.html">الخدمات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+        <li><button id="theme-toggle">🌓</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ✅ Section: من نحن -->
+  <section class="about-home">
+    <div class="container wow fadeInUp">
+      <h3>من نحن</h3>
+      <p>
+        نحن في <strong>AXES digital</strong> نؤمن بأن التكنولوجيا والتصميم قادران على تحويل أي فكرة إلى واقع ملموس. شركتنا متخصصة في تقديم حلول احترافية للشركات تشمل:
+        <br><br>
+        ✅ تصميم الهويات البصرية والشعارات والمطبوعات. <br>
+        ✅ إنشاء مواقع إلكترونية عصرية وسريعة. <br>
+        ✅ تركيب وصيانة أنظمة الشبكات والسيرفرات وكاميرات المراقبة. <br>
+        ✅ تصنيع وصيانة لوحات التحكم الكهربائية الصناعية.
+        <br><br>
+        نعمل بشغف لنمنح عملائنا الثقة والجودة في كل مشروع نقوم به، ونفخر بخدمة الشركات في مختلف المجالات الصناعية والتجارية.
+      </p>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <div class="container">
+      جميع الحقوق محفوظة &copy; 2025 AXES digital
+    </div>
+  </footer>
+
+  <!-- ✅ Toggle Theme -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>
