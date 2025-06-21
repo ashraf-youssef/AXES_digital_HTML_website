@@ -1,77 +1,122 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الخدمات | AXES digital</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>new WOW().init();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>خدماتنا - AXES digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fff;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(135deg, #900c3f, #4a0027);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .section-title {
+      color: #900c3f;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .service-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .service-card .card-body {
+      padding: 1rem;
+      background-color: #fafafa;
+    }
+    .service-card .card-title {
+      color: #900c3f;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #900c3f;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">AXES digital</div>
-      <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html">من نحن</a></li>
-        <li><a href="services.html" class="active">الخدمات</a></li>
-        <li><a href="contact.html">تواصل معنا</a></li>
-        <li><button id="theme-toggle">🌓</button></li>
-      </ul>
-    </div>
+  <!-- رأس الصفحة -->
+  <header>
+    <h1>خدماتنا</h1>
+    <p>اكتشف كيف يمكن لـ AXES digital أن تدفع شركتك إلى الأمام</p>
   </header>
 
-  <!-- ✅ عنوان الصفحة -->
-  <section class="container wow fadeInUp">
-    <h2>خدماتنا</h2>
-    <p>نقدّم في AXES digital باقة متكاملة من الخدمات التقنية والإبداعية للشركات والمؤسسات.</p>
+  <!-- محتوى الخدمات -->
+  <section class="container py-5">
+    <h2 class="section-title text-center">مجالاتنا الأساسية</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card">
+          <img src="assets/فيسبوك%20ديزاين%20(1).png" alt="تصميم الهوية البصرية" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">تصميم الهويات والمطبوعات</h5>
+            <p class="card-text">هويتك البصرية هي واجهة شركتك: شعار احترافي، كارت عمل مميز، كتالوج أنيق، وواجهات كلادينج مبهرة.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card">
+          <img src="assets/فيسبوك%20ديزاين.png" alt="تصميم المواقع الإلكترونية" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">تصميم المواقع الإلكترونية</h5>
+            <p class="card-text">نصمم مواقع احترافية، سريعة، متوافقة مع الجوال، تمثل شركتك وتزيد من تواجدك الرقمي.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card">
+          <img src="assets/network.jpg" alt="الشبكات والسيرفرات" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">تركيب الشبكات والسيرفرات</h5>
+            <p class="card-text">تأسيس شبكة قوية، تركيب سيرفرات، تأمين البيانات، أنظمة مراقبة وبصمة، واستمرارية العمل.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card service-card">
+          <img src="assets/control.jpg" alt="لوحات التحكم الصناعي" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">لوحات الكنترول وخطوط الإنتاج</h5>
+            <p class="card-text">تصميم وتركيب وصيانة لوحات الكهرباء، تحكم دقيق في خطوط الإنتاج، وكفاءة تشغيل عالية للمصانع.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
-  <!-- ✅ خدمات -->
-  <section class="container highlights wow fadeInUp" data-wow-delay="0.2s">
-    <div class="highlight">
-      <h4>تصميم هويات الشركات والمطبوعات</h4>
-      <p>كروت شخصية، كتالوجات، يافطات، واجهات كلادينج بتصميم إبداعي وهوية موحدة.</p>
-    </div>
-    <div class="highlight">
-      <h4>إنشاء المواقع الإلكترونية</h4>
-      <p>مواقع متجاوبة وسريعة تعكس احترافية شركتك، ومتوافقة مع الأجهزة.</p>
-    </div>
-    <div class="highlight">
-      <h4>الشبكات والسيرفرات وأنظمة الأمان</h4>
-      <p>تأسيس شبكات وسيرفرات داخلية، أجهزة بصمة، كاميرات مراقبة، ونسخ احتياطي للبيانات.</p>
-    </div>
-    <div class="highlight">
-      <h4>لوحات التحكم الصناعي</h4>
-      <p>تركيب وصيانة لوحات الباور والكنترول لخطوط الإنتاج والماكينات الصناعية المختلفة.</p>
-    </div>
-  </section>
-
-  <!-- ✅ CTA -->
-  <section class="cta wow fadeInUp" data-wow-delay="0.3s">
-    <div class="container">
-      <h2>هل لديك مشروع؟</h2>
-      <p>راسلنا لنساعدك في تحقيق رؤيتك الرقمية والتقنية بأعلى جودة.</p>
-      <a href="contact.html" class="btn-cta">تواصل معنا الآن</a>
-    </div>
-  </section>
-
-  <!-- ✅ Footer -->
-  <footer class="footer">
-    <div class="container">
-      جميع الحقوق محفوظة &copy; 2025 AXES digital | 01000286401
-    </div>
+  <!-- تذييل -->
+  <footer>
+    <p>&copy; 2025 AXES digital. جميع الحقوق محفوظة.</p>
+    <p>📞 01000286401</p>
   </footer>
-
-  <!-- ✅ Theme Toggle -->
-  <script>
-    document.getElementById('theme-toggle').onclick = () =>
-      document.body.classList.toggle('dark');
-  </script>
 
 </body>
 </html>
