@@ -1,53 +1,95 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>تواصل معنا - AXES digital</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="darkmode.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      background: linear-gradient(135deg, #900c3f, #4a0027);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .section-title {
+      color: #900c3f;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+    .contact-form {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .btn-danger {
+      background-color: #d80000;
+      border: none;
+    }
+    .btn-danger:hover {
+      background-color: #a30000;
+    }
+    footer {
+      background-color: #900c3f;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
 </head>
-<body class="light-mode">
+<body>
+
+  <!-- رأس الصفحة -->
   <header>
-    <div class="container">
-      <h1>AXES digital</h1>
-      <nav>
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">من نحن</a>
-        <a href="services.html">الخدمات</a>
-        <a href="contact.html" class="active">تواصل معنا</a>
-        <button id="darkModeToggle">🌙</button>
-      </nav>
-    </div>
+    <h1>تواصل معنا</h1>
+    <p>نسعد بخدمتك في أي وقت</p>
   </header>
 
-  <main class="container">
-    <h2>راسلنا الآن</h2>
-    <p>يمكنك التواصل معنا عبر النموذج التالي، وسنرد عليك خلال وقت قصير.</p>
+  <!-- نموذج التواصل -->
+  <section class="container py-5">
+    <h2 class="section-title text-center">أرسل لنا رسالة</h2>
 
-    <form action="https://formspree.io/f/moqgebdp" method="POST" class="contact-form">
-      <div>
-        <label>الاسم الكامل</label>
-        <input type="text" name="name" required />
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form class="contact-form" action="mailto:your_email@example.com" method="POST" enctype="text/plain">
+          <div class="mb-3">
+            <label for="name" class="form-label">الاسم الكامل</label>
+            <input type="text" class="form-control" name="name" required placeholder="اكتب اسمك هنا">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="form-control" name="email" required placeholder="example@mail.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">رسالتك</label>
+            <textarea class="form-control" name="message" rows="5" required placeholder="ما الذي تود التواصل بشأنه؟"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger w-100">إرسال الرسالة</button>
+        </form>
       </div>
-      <div>
-        <label>البريد الإلكتروني</label>
-        <input type="email" name="email" required />
-      </div>
-      <div>
-        <label>رقم الهاتف (اختياري)</label>
-        <input type="text" name="phone" />
-      </div>
-      <div>
-        <label>الرسالة</label>
-        <textarea name="message" rows="6" required></textarea>
-      </div>
-      <button type="submit">إرسال</button>
-    </form>
-  </main>
+    </div>
+  </section>
 
+  <!-- بيانات التواصل -->
+  <section class="container text-center mt-5">
+    <h4 class="section-title">معلومات التواصل</h4>
+    <p>📞 الهاتف: 01000286401</p>
+    <p>📧 البريد: ashrafyoussef.dev@gmail.com</p>
+    <p>📍 مصر</p>
+  </section>
+
+  <!-- تذييل -->
   <footer>
-    <p>جميع الحقوق محفوظة &copy; AXES digital - 2025</p>
+    <p>&copy; 2025 AXES digital. جميع الحقوق محفوظة.</p>
   </footer>
+
 </body>
 </html>
