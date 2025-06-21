@@ -3,84 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AXES digital | حلول رقمية وهندسية متكاملة</title>
+  <title>AXES Digital</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* شريط علوي متقلص عند التمرير */
+    header {
+      transition: all 0.3s ease;
+    }
+    header.shrink {
+      padding: 5px 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* زر واتساب عائم */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #d10000;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      z-index: 9999;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* كروت الخدمات */
+    .service-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* خلفية ثابتة */
+    .hero {
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* الإحصائيات */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      background: #f0f0f0;
+      padding: 40px 10px;
+    }
+    .stats div {
+      font-size: 18px;
+    }
+
+    /* الفوتر */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .social-icons i {
+      margin-left: 10px;
+      font-size: 20px;
+    }
+
+    .top-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .lang-switch, .theme-toggle {
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Header -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">AXES digital</div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">الرئيسية</a></li>
+<header id="navbar" style="background-color:#111; padding:20px;">
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <img src="assets/logo.png" alt="Logo" style="height:40px;">
+      <h1 style="color:white;">AXES Digital</h1>
+    </div>
+    <div class="top-controls">
+      <button class="lang-switch" title="تغيير اللغة"><i class="fas fa-globe"></i></button>
+      <button class="theme-toggle" title="الوضع الليلي"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>شريكك نحو مستقبل رقمي مشرق</h2>
+    <p>حلول تقنية مبتكرة مصممة خصيصًا لنجاح أعمالك</p>
+  </div>
+</section>
+
+<section class="services container" style="padding:60px 20px;">
+  <h2 style="text-align:center;">خدماتنا</h2>
+  <div style="display:flex; overflow-x:auto; gap:20px; padding-top:20px;">
+    <div class="service-card">
+      <h3>تصميم المواقع</h3>
+      <p>تصميم مواقع احترافية مخصصة لعلامتك التجارية</p>
+      <a href="services.html" class="btn">المزيد</a>
+    </div>
+    <div class="service-card">
+      <h3>تطبيقات الجوال</h3>
+      <p>تطوير تطبيقات ذكية لنظامي iOS و Android</p>
+      <a href="services.html" class="btn">المزيد</a>
+    </div>
+    <div class="service-card">
+      <h3>التسويق الرقمي</h3>
+      <p>استراتيجيات تسويق فعالة لزيادة ظهورك الرقمي</p>
+      <a href="services.html" class="btn">المزيد</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div>+150 عميل راضي</div>
+  <div>+300 مشروع ناجح</div>
+  <div>+5 سنوات من الإبداع</div>
+  <div>98% رضا العملاء هو هدفنا</div>
+</section>
+
+<section class="contact-section container" style="padding:60px 20px;">
+  <h2>ابدأ رحلتك معنا</h2>
+  <div style="display:flex; gap:30px; flex-wrap:wrap;">
+    <form style="flex:1;">
+      <input type="text" placeholder="الاسم" required style="width:100%; margin-bottom:10px;" />
+      <input type="email" placeholder="البريد الإلكتروني" required style="width:100%; margin-bottom:10px;" />
+      <textarea placeholder="اكتب رسالتك" rows="5" style="width:100%; margin-bottom:10px;"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+    <div style="flex:1; min-height:250px;">
+      <iframe src="https://maps.google.com/maps?q=cairo&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <img src="assets/logo.png" alt="Logo" style="height:40px;">
+      <p>AXES Digital</p>
+      <p>شريكك نحو مستقبل رقمي مشرق وحلول تقنية مبتكرة</p>
+    </div>
+    <div>
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
         <li><a href="about.html">من نحن</a></li>
         <li><a href="services.html">الخدمات</a></li>
         <li><a href="contact.html">تواصل معنا</a></li>
-        <li><button id="theme-toggle">🌓</button></li>
       </ul>
     </div>
-  </header>
-
-  <!-- ✅ Hero Section -->
-  <section class="hero wow fadeIn">
-    <div class="container">
-      <h1>نقود تحولك الرقمي</h1>
-      <p>حلول متكاملة في التصميم، المواقع، الشبكات، التحكم الصناعي وأكثر!</p>
-      <a href="contact.html" class="btn-hero">احصل على عرضك الآن</a>
+    <div>
+      <h4>معلومات التواصل</h4>
+      <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+      <p><i class="fas fa-phone"></i> +20 123 456 789</p>
+      <p><i class="fas fa-envelope"></i> info@axesdigital.com</p>
     </div>
-  </section>
-
-  <!-- ✅ Highlights -->
-  <section class="highlights wow fadeInUp" data-wow-delay="0.2s">
-    <div class="container">
-      <div class="highlight">
-        <h4>تصميم هوية الشركات</h4>
-        <p>كروت، مطبوعات، يافطات، واجهات عصرية.</p>
-      </div>
-      <div class="highlight">
-        <h4>مواقع إلكترونية احترافية</h4>
-        <p>متجاوبة، سريعة، آمنة، وواجهة جذابة.</p>
-      </div>
-      <div class="highlight">
-        <h4>شبكات وسيرفرات</h4>
-        <p>تأسيس، تأمين، مراقبة، ونسخ احتياطي.</p>
-      </div>
-      <div class="highlight">
-        <h4>لوحات كنترول صناعي</h4>
-        <p>باور وتحكم لماكينات الإنتاج وخطوط التصنيع.</p>
+    <div>
+      <h4>تابعنا</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- ✅ Call to Action -->
-  <section class="cta wow fadeInUp" data-wow-delay="0.4s">
-    <div class="container">
-      <h2>ابدأ رحلة تطوير شركتك معنا</h2>
-      <p>اتصل بنا الآن لنمنحك استشارة مجانية في بناء هويتك أو تطوير بنيتك الرقمية.</p>
-      <a href="contact.html" class="btn-cta">تواصل معنا</a>
-    </div>
-  </section>
+<a href="https://wa.me/20123456789" class="whatsapp-float" title="تواصل واتساب"><i class="fab fa-whatsapp"></i></a>
 
-  <!-- ✅ Footer -->
-  <footer class="footer">
-    <div class="container">
-      جميع الحقوق محفوظة &copy; 2025 AXES digital | 01000286401
-    </div>
-  </footer>
-
-  <!-- ✅ Theme Toggle -->
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
-
+<script>
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("navbar");
+    header.classList.toggle("shrink", window.scrollY > 50);
+  });
+</script>
 </body>
 </html>
