@@ -1,22 +1,22 @@
-// تخزين الوضع في localStorage
-const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
+// زر الوضع الليلي
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
 
-// تفعيل الوضع المحفوظ عند تحميل الصفحة
-window.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark");
-  }
-});
+      // حفظ الوضع في localStorage
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
 
-// عند الضغط على الزر
-toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-
-  // تخزين الوضع الحالي
-  if (body.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
+    // تحميل الوضع المحفوظ
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+    }
   }
 });
