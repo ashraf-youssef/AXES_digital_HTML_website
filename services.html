@@ -201,5 +201,13 @@
   });
 </script>
 <script src="js/main.js"></script>
+<script>
+  // تحميل الشريط العلوي من ملف خارجي
+  fetch('header.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('main-header').innerHTML = data;
+    });
+</script>
 </body>
 </html>
