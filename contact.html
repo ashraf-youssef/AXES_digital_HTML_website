@@ -2,82 +2,52 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>تواصل معنا | AXES digital</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>تواصل معنا - AXES digital</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="darkmode.js" defer></script>
 </head>
-<body>
-
-  <!-- ✅ Header -->
-  <header class="navbar">
+<body class="light-mode">
+  <header>
     <div class="container">
-      <div class="logo">AXES digital</div>
-      <ul class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="about.html">من نحن</a></li>
-        <li><a href="services.html">الخدمات</a></li>
-        <li><a href="contact.html" class="active">تواصل معنا</a></li>
-        <li><button id="theme-toggle">🌓</button></li>
-      </ul>
+      <h1>AXES digital</h1>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">من نحن</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html" class="active">تواصل معنا</a>
+        <button id="darkModeToggle">🌙</button>
+      </nav>
     </div>
   </header>
 
-  <!-- ✅ تواصل معنا -->
-  <section class="contact-section">
-    <div class="container wow fadeInUp">
-      <h3>تواصل معنا</h3>
-      <p>يسعدنا تواصلك معنا لطلب أي من خدماتنا أو للاستفسارات.</p>
+  <main class="container">
+    <h2>راسلنا الآن</h2>
+    <p>يمكنك التواصل معنا عبر النموذج التالي، وسنرد عليك خلال وقت قصير.</p>
 
-      <form action="https://formspree.io/f/YOUR_ID" method="POST" class="contact-form">
-        <div class="form-group">
-          <label>الاسم</label>
-          <input type="text" name="name" required />
-        </div>
-
-        <div class="form-group">
-          <label>البريد الإلكتروني</label>
-          <input type="email" name="email" required />
-        </div>
-
-        <div class="form-group">
-          <label>رقم الهاتف</label>
-          <input type="text" name="phone" />
-        </div>
-
-        <div class="form-group">
-          <label>رسالتك</label>
-          <textarea name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-submit">إرسال</button>
-      </form>
-
-      <div class="contact-info">
-        <p><strong>الهاتف:</strong> 01000286401</p>
-        <p><strong>البريد:</strong> info@axesdigital.com</p>
+    <form action="https://formspree.io/f/moqgebdp" method="POST" class="contact-form">
+      <div>
+        <label>الاسم الكامل</label>
+        <input type="text" name="name" required />
       </div>
-    </div>
-  </section>
+      <div>
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" required />
+      </div>
+      <div>
+        <label>رقم الهاتف (اختياري)</label>
+        <input type="text" name="phone" />
+      </div>
+      <div>
+        <label>الرسالة</label>
+        <textarea name="message" rows="6" required></textarea>
+      </div>
+      <button type="submit">إرسال</button>
+    </form>
+  </main>
 
-  <!-- ✅ Footer -->
-  <footer class="footer">
-    <div class="container">
-      جميع الحقوق محفوظة &copy; 2025 AXES digital
-    </div>
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; AXES digital - 2025</p>
   </footer>
-
-  <!-- ✅ Toggle Theme -->
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
-
 </body>
 </html>
